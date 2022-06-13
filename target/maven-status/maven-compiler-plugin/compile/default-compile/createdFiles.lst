@@ -1,0 +1,15 @@
+com/metrics/api/controller/MainController.class
+com/metrics/api/domain/MetricValue.class
+com/metrics/api/specification/MetricSpecification.class
+com/metrics/api/dto/MetricValueDTO.class
+com/metrics/api/repository/MetricValueRepository.class
+com/metrics/api/dto/MetricCalculationParamDTO.class
+com/metrics/api/repository/MetricRepository.class
+com/metrics/api/dto/MetadataCalculationDTO.class
+com/metrics/api/service/MetricService.class
+com/metrics/api/dto/MetricDTO.class
+com/metrics/api/MainApplication.class
+com/metrics/api/domain/Metric.class
+com/metrics/api/dto/MetricCalcDTO.class
+com/metrics/api/enums/TimeType.class
+com/metrics/api/controller/MetricsController.class

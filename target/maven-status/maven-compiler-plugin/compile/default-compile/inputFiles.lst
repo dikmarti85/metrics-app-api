@@ -1,0 +1,15 @@
+/Users/dimartinez/workspace/metrics-app-api/src/main/java/com/metrics/api/dto/MetricCalculationParamDTO.java
+/Users/dimartinez/workspace/metrics-app-api/src/main/java/com/metrics/api/service/MetricService.java
+/Users/dimartinez/workspace/metrics-app-api/src/main/java/com/metrics/api/dto/MetricValueDTO.java
+/Users/dimartinez/workspace/metrics-app-api/src/main/java/com/metrics/api/specification/MetricSpecification.java
+/Users/dimartinez/workspace/metrics-app-api/src/main/java/com/metrics/api/enums/TimeType.java
+/Users/dimartinez/workspace/metrics-app-api/src/main/java/com/metrics/api/controller/MetricsController.java
+/Users/dimartinez/workspace/metrics-app-api/src/main/java/com/metrics/api/dto/MetricCalcDTO.java
+/Users/dimartinez/workspace/metrics-app-api/src/main/java/com/metrics/api/domain/MetricValue.java
+/Users/dimartinez/workspace/metrics-app-api/src/main/java/com/metrics/api/dto/MetricDTO.java
+/Users/dimartinez/workspace/metrics-app-api/src/main/java/com/metrics/api/repository/MetricValueRepository.java
+/Users/dimartinez/workspace/metrics-app-api/src/main/java/com/metrics/api/MainApplication.java
+/Users/dimartinez/workspace/metrics-app-api/src/main/java/com/metrics/api/dto/MetadataCalculationDTO.java
+/Users/dimartinez/workspace/metrics-app-api/src/main/java/com/metrics/api/domain/Metric.java
+/Users/dimartinez/workspace/metrics-app-api/src/main/java/com/metrics/api/repository/MetricRepository.java
+/Users/dimartinez/workspace/metrics-app-api/src/main/java/com/metrics/api/controller/MainController.java
