@@ -2,6 +2,7 @@ package com.metrics.api.controller;
 
 import com.metrics.api.domain.Metric;
 import com.metrics.api.domain.MetricValue;
+import com.metrics.api.dto.MetadataCalculationDTO;
 import com.metrics.api.dto.MetricCalculationParamDTO;
 import com.metrics.api.repository.MetricRepository;
 import com.metrics.api.service.MetricService;
@@ -43,7 +44,7 @@ class MetricsController {
     }
 
     @PostMapping("/calc")
-    public Object calculate(@Valid @RequestBody MetricCalculationParamDTO calculationParamDTO) {
+    public MetadataCalculationDTO calculate(@Valid @RequestBody MetricCalculationParamDTO calculationParamDTO) {
         return metricService.calculateOperation(calculationParamDTO);
     }
 

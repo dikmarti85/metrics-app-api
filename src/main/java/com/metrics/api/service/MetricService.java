@@ -4,9 +4,11 @@ import com.metrics.api.domain.Metric;
 import com.metrics.api.domain.MetricValue;
 import com.metrics.api.dto.MetadataCalculationDTO;
 import com.metrics.api.dto.MetricCalculationParamDTO;
+import com.metrics.api.exceptions.BadRequestException;
 import com.metrics.api.repository.MetricRepository;
 import com.metrics.api.repository.MetricValueRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -23,13 +25,15 @@ public class MetricService {
     private static final String DAY = "DAY";
     private static final String HOUR = "HOUR";
     private static final String MIN = "MIN";
+    private static final String ERROR_PARAM_TIME = "Bad request: param time type from empty";
+    private static final String ERROR_PARAM_DATE_FROM = "Bad request: param date from empty";
+
 
     @Autowired
     private MetricRepository metricRepository;
 
     @Autowired
     private MetricValueRepository metricValueRepository;
-
 
     public Metric saveMetric(Metric metric) {
         return metricRepository.save(metric);
@@ -39,7 +43,7 @@ public class MetricService {
         return metricValueRepository.save(metricValue);
     }
 
-    public Object calculateOperation(MetricCalculationParamDTO calculationParamDTO) {
+    public MetadataCalculationDTO  calculateOperation(MetricCalculationParamDTO calculationParamDTO) {
 
         MetadataCalculationDTO result = new MetadataCalculationDTO();
         List<ArrayList> metrics = new ArrayList<>();
@@ -48,6 +52,14 @@ public class MetricService {
         List<String> days = new ArrayList<>();
         List<String> months = new ArrayList<>();
         List<String> years = new ArrayList<>();
+
+        if (calculationParamDTO.getDateFrom() == null) {
+            throw new BadRequestException(ERROR_PARAM_DATE_FROM, null, HttpStatus.BAD_REQUEST);
+        }
+
+        if (calculationParamDTO.getTimeType() == null) {
+            throw new BadRequestException(ERROR_PARAM_TIME, null, HttpStatus.BAD_REQUEST);
+        }
 
         Timestamp dateEndCalc = calculationParamDTO.getDateEnd() == null ? Timestamp.valueOf(LocalDateTime.now()) : calculationParamDTO.getDateEnd();
 
