@@ -42,7 +42,7 @@ public class ServiceTest {
 
         Metric metric = new Metric();
         metric.setId(1L);
-        metric.setName("metric_test");
+        metric.setName("metric_test"+ Timestamp.valueOf(LocalDateTime.now()).getTime());
         Mockito.lenient().when(metricRepository.save(Mockito.any())).thenReturn(metric);
 
         Metric metricSaved = metricService.saveMetric(metric);

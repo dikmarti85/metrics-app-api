@@ -60,7 +60,7 @@ public class MetricsControllerTest {
     @Test
     public void testPostMetric() {
         Metric metric = new Metric();
-        metric.setName("metric_test");
+        metric.setName("metric_test"+ Timestamp.valueOf(LocalDateTime.now()).getTime());
 
         RestAssured
                 .given().

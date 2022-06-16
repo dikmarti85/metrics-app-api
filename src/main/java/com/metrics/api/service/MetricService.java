@@ -43,7 +43,7 @@ public class MetricService {
         return metricValueRepository.save(metricValue);
     }
 
-    public MetadataCalculationDTO  calculateOperation(MetricCalculationParamDTO calculationParamDTO) {
+    public MetadataCalculationDTO calculateOperation(MetricCalculationParamDTO calculationParamDTO) {
 
         MetadataCalculationDTO result = new MetadataCalculationDTO();
         List<ArrayList> metrics = new ArrayList<>();
